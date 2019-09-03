@@ -1,0 +1,29 @@
+<?php
+
+namespace exemplo;
+
+use Illuminate\Database\Eloquent\Model;
+
+
+class Tabuada extends Model
+{
+	private $base;
+	private $resultados;
+
+
+	function __construct ($base=1) {
+		$this->base = $base;
+		$this->resultados = array();
+		for($i = 1; $i <= 10; $i++) {
+			$this->resultados[$i]=$i * $base;
+		}
+    }
+    
+    function getBase() {
+		return $this->base;    
+    }
+    
+    function getResultados() {
+    	return $this->resultados;
+    }
+}
