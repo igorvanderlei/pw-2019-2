@@ -25,3 +25,13 @@ $factory->define(User::class, function (Faker $faker) {
         'remember_token' => Str::random(10),
     ];
 });
+
+
+$factory->define(exemplo\Anotacao::class, function (Faker $faker) {
+    return [
+        'texto' => $faker->realText,
+        'status' => false
+    ];
+});
+
+
